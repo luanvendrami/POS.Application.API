@@ -22,7 +22,7 @@ namespace IoC.infra
             services.AddDbContext<DataContext>(options =>
             {
                 options.UseInMemoryDatabase(databaseName: "db-Tests");
-                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); // optional, for read-only scenarios
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking); 
             });
         }
 

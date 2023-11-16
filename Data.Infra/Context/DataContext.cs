@@ -11,8 +11,7 @@ namespace Data.Infra.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Defina a chave primária para a entidade DrinkOrder
-            modelBuilder.Entity<DrinkOrder>().HasKey(key => key.Id); // Substitua 'Id' pelo nome da sua propriedade de chave primária
+            modelBuilder.Entity<DrinkOrder>().HasKey(key => key.Id);
             modelBuilder.Entity<FriesOrder>().HasKey(key => key.Id);
             modelBuilder.Entity<GrillOrder>().HasKey(key => key.Id);
             modelBuilder.Entity<SaladOrder>().HasKey(key => key.Id);
