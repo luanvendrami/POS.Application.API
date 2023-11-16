@@ -1,14 +1,8 @@
 ﻿using AutoMapper;
 using Domain.Dto.Request;
 using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Service.Mapping
+namespace IoC.infra.MappingAutoMapper
 {
     public class MappingProfile : Profile
     {

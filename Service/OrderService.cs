@@ -1,17 +1,8 @@
 ﻿using AutoMapper;
-using Data.Infra.Context;
 using Domain.Dto.Request;
 using Domain.Dto.Response;
-using Domain.Entities;
 using Domain.Interface.Repository;
 using Domain.Interface.Service;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service
 {

@@ -1,9 +1,7 @@
-﻿using Data.Infra.Context;
-using Domain.Dto.Request;
+﻿using Domain.Dto.Request;
 using Domain.Entities;
 using Domain.Interface.Repository;
 using Domain.Interface.Service;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace Service
 {

@@ -3,8 +3,12 @@ using Domain.Dto.Request;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using IoC.infra;
+using IoC.infra.MappingAutoMapper;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using POS.Application.API.FluentValidation;
-using Service.Mapping;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +20,7 @@ builder.Services.AddTransient<IValidator<OrderFriesDto>, OrderFriesDtoValidator>
 builder.Services.AddTransient<IValidator<SaladOrderDto>, SaladOrderDtoValidator>();
 
 builder.Services.AddControllers().AddFluentValidation();
+
 
 builder.Services.AddLogging();
 
@@ -32,6 +37,22 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+    });
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api POS", Version = "v1" });
+
+    // Set the comments path for the Swagger JSON and UI.
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
+});
 
 var app = builder.Build();
 
@@ -39,8 +60,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
+
+    // Habilitar o Swagger UI no ambiente de desenvolvimento
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API POS V1"));
 }
 
 app.UseHttpsRedirection();

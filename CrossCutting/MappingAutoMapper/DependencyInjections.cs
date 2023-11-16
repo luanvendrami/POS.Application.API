@@ -1,9 +1,7 @@
 ﻿using Data.Infra.Context;
 using Data.Infra.Repository;
-using Domain.Dto.Request;
 using Domain.Interface.Repository;
 using Domain.Interface.Service;
-using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Service;

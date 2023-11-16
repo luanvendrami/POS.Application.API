@@ -1,13 +1,7 @@
-﻿using Domain.Dto;
+﻿using Domain.Dto.Request;
 using Domain.Enum;
 using FluentValidation.TestHelper;
 using POS.Application.API.FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Test

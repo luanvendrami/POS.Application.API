@@ -1,4 +1,5 @@
 ﻿using Domain.Dto;
+using Domain.Dto.Request;
 using Domain.Enum;
 using FluentValidation.TestHelper;
 using POS.Application.API.FluentValidation;
