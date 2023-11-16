@@ -4,7 +4,6 @@ namespace Domain.Dto.Response
 {
     public class OrderDataReponseDto
     {
-        public int IdOrder { get; set; }
         public List<DrinkOrderDto>? Drink { get; set; }
         public List<GrillOrderDto>? Grill { get; set; }
         public List<OrderFriesDto>? Fries { get; set; }

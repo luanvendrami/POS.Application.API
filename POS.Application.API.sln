@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Data", "3 - Data", "{1F69813C-99B0-4514-B51E-621832F14EB4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Test", "5 - Test", "{6F466574-1F6E-4A1B-9F3F-4E063E9432B7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Test", "4 - Test", "{6F466574-1F6E-4A1B-9F3F-4E063E9432B7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{8C3A71FC-A69C-4C95-A652-613C52EA11D8}"
 EndProject
@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Infra", "Data.Infra\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQWorker", "RabbitMQWorker\RabbitMQWorker.csproj", "{5EED229E-EC18-42AA-9E14-98C89CC08C3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC.infra", "CrossCutting\IoC.infra.csproj", "{620A92CC-5488-4BDC-BDE1-EF947C7932BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC.infra", "CrossCutting\IoC.infra.csproj", "{620A92CC-5488-4BDC-BDE1-EF947C7932BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
